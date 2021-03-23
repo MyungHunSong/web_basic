@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>타이틀 맨</title>
+	<style type="text/css">
+		table, th, td{
+			border: 1px solid #ccc;	
+	}
+	th{
+			padding: 15px;
+	}
+	
+	
+	tr> td:nth-child(odd){
+		width: 150px;
+	}
+	/* tr > td:nth-child(even) {
+		width: 300px;		
+	} */
+	
+	#a{
+		width:300px;
+	}
+	
+	</style>
+</head>
+<body>
+	<table>
+		<figcaption>
+			<strong>회원 정보</strong>
+			<p>영남인재 회원정보입니다.</p>
+			</figcaption>
+		<tr>
+			<td>이름</td>
+			<td id = "a"></td>
+			<td>연락처</td>
+			<td id = "a"></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td colspan = "3"></td>
+		</tr>
+		<tr>
+			<th>자기소개</th>
+			<td colspan = "3"></td>	
+		</tr>
+	</table>
+</body>
+</html>
