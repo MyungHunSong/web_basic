@@ -3,24 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>레이블 과 함께</title>
+	
+	<style >
+		fieldset {
+			margin : auto;
+			border: 1px solid black;
+		}
+	
+	</style>
 </head>
 <body>
 	<form action="user-name" method = "get">
-	
 	</form>
-	
-	
-
 <hr>
+
 <form action = "ReisterServlet" method = "get">
-	<h3>수강 분야(다수 선택 가능)</h3>	
+	<fieldset>
+	<h3>수강 분야(다수 선택 가능)</h3>
+	<legend>멀할꺼냐</legend>
 	<ul>
 		<li><input type = "checkbox" value = "gy" name = gubun>문법</li>
 		<li><input type = "checkbox" value = "wr" name = gubun>작문</li>
 		<li><input type = "checkbox" value = "rd" name = gubun>독해</li>
 	</ul>
+	</fieldset>
 	
-	<h3>수강 과목(1과목만 선택 가능)</h3>	
+	
+	<fieldset>
+	<h3>수강 과목(1과목만 선택 가능)</h3>
+	
+	<legnd>과목 선택</legnd>
 	<ul>
 		<li>
 		<label><input type = "radio" name = "subject" value = "eng"> 영어회화</label>
@@ -32,7 +44,54 @@
 		<input type = "radio" name = "subject" value = "jp">일어회화
 		</li>
 	</ul>
+	
+	</fieldset>
+	
+	
+	<fieldset>
+	<legend>등록 정보</legend>
+	<ul>
+		<li>
+		<label >참여인원<samll>(최대 10명)</samll></label>
+		<input type = "number" id = "member" value ="1" min = "0" max = "10" step = "1" name = "member">
+		</li>	
+		
+		<li>
+		<label >지원물품<samll>(1인당 5개)</samll></label>
+		<input type = "number" id = "stuffs"  value ="1" min = "0" max = "50" name = "stuffs" > 
+		</li>	
+		
+		<li>
+		<label >희망단계<samll>(하,중,상)</samll></label>
+		<input type = "range" id = "statis" value ="1" min = "1" max = "10" step = "3" name = "statis">
+		</li>	
+	</ul>
+	</fieldset>
+	
+	<fieldset>
+	<legend>신청 과목</legend>
+	<p>이 달에 신청할 과목을 선택하세요(1과목만 가능)</p>
+		<label><input type = "radio" name = "subjecter" value = "speaking">회화</label>
+		<label><input type = "radio" name = "subjecter" value = "grammer">문법</label>
+		<label><input type = "radio" name = "subjecter" value = "writing">작문</label>	
+	</fieldset>
+	
+	<fieldset>
+	<legend>메일링</legend>
+	<p>메일로 받고 싶은 뉴스 주제를 선택해 주세요(복수 선택 가능)</p>
+		<label><input type = "checkbox" name ="mailing"  value = "news">해외 단신</label>
+		<label><input type = "checkbox" name ="mailing"  value = "dialog">5분 회화</label>
+		<label><input type = "checkbox" name ="mailing"  value = "pops">모닝팝스</label>
+	</fieldset>
+	
+	
+	<fieldset>
+	<legend>조회 기간</legend>
+		<label><input type = "date" id = "start" name = "start"></label>
+		<label><input type = "date" id = "end" name = "end"></label>
+	</fieldset>
 	<input type = "submit" value = "전송">
 </form>	
+	
 </body>
 </html>

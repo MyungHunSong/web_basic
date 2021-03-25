@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>특강 신청</title>
+	<style >
+		#field{
+			border: 2px solid black;
+			
+		}
+		#uname{
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+	<form action="iambest">
+	<h1>여름방학 특강 신청</h1>
+	<fieldset id = "field">
+		<legend>수강과목</legend>
+		<label class = "
+eg" for = "subj">영어회화(초급)</label>
+		<input type = "text" id = "subj" value="오전 9:00 ~ 11:00" readonly>
+	</fieldset>
+	
+	<fieldset id = "field">
+		<legend>신청자</legend>
+		<label class = "reg" for = "uname" id = "uname">이름</label>
+		<input type = "text" id = "uname" autofocus required>
+		<br>
+		<label class = "reg" for = "uid">학번</label>
+		<input type = "text" id = "uid" placeholder = "하이픈없이 입력">
+		<br>
+		<label class = "reg" for = "uclass">학과</label>
+		<input type = "search" id = "uclass">
+	</fieldset>
+	
+	<fieldset id = "field">
+		<legend>교제 주문</legend>
+		<label class = "reg" for = "group">교재</label>
+		<input type = "number" id = "group" vale = "1" min = "1" max = "2">
+		<br>
+		<label class = "reg" for = "group">워크시트</label>
+		<input type = "number" id = "group" vale = "1" min = "1" max = "2">
+		<br>
+		<label class = "reg" for = "group">단체주문</label>
+		<input type = "number" id = "group" value = "10" min = "10" max = "100" step = "10">		
+	</fieldset>
+	</form>
+</body>
+</html>
